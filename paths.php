@@ -45,7 +45,8 @@ $paths['bundle'] = 'bundles';
 // --------------------------------------------------------------
 // The path to the storage directory.
 // --------------------------------------------------------------
-$paths['storage'] = 'storage';
+#$paths['storage'] = 'storage';
+$paths['storage'] = sys_get_temp_dir();
 
 // --------------------------------------------------------------
 // The path to the public directory.
