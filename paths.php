@@ -117,7 +117,8 @@ foreach ($paths as $name => $path)
 {
 	if ( ! isset($GLOBALS['laravel_paths'][$name]))
 	{
-		$GLOBALS['laravel_paths'][$name] = realpath($path).DS;
+		#$GLOBALS['laravel_paths'][$name] = realpath($path).DS;
+		$GLOBALS['laravel_paths'][$name] = ($path!='storage') ? realpath($path).DS : $path.DS;
 	}
 }
 
